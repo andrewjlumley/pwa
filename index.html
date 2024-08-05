@@ -1,9 +1,10 @@
 <html lang="en">
     <head>
+        <link rel="stylesheet" href="css/photo.css">
+        <link rel="manifest" href="/manifest.json">
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>Welcome</title>
-        <link rel="manifest" href="/manifest.json">
     </head>
     <body>
        <header>
@@ -22,7 +23,23 @@
         <main>
             <h2>Home</h2>
             <p>and here is some welcome text</p>
-            <input type="button" value="Send data API" onclick="SendAPI();">
+            <div class="contentarea">
+                <h1>MDN - navigator.mediaDevices.getUserMedia(): Still photo capture demo</h1>
+                <p>
+                  This example demonstrates how to set up a media stream using your built-in
+                  webcam, fetch an image from that stream, and create a PNG using that image.
+                </p>
+                <div class="camera">
+                  <video id="video">Video stream not available.</video>
+                  <button id="startbutton">Take photo</button>
+                </div>
+                <canvas id="canvas"> </canvas>
+                <div id="photos" class="output">
+                </div>
+                <div class="status">
+                  <label id="status" for="status">Something</label>
+                </div>
+            </div>
         </main>
 
         <script src="js/main.js"></script>
